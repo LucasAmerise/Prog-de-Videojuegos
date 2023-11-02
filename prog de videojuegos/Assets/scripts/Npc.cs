@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class Npc : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public float speed = 5.0f;
-    private int currentWaypointIndex = 0;
+    public Transform[] waypoints; // Arreglo de transformadores de los waypoints
+    public float moveSpeed = 3.0f; // Velocidad de movimiento
+    public float stoppingDistance = 1.0f; // Distancia de detención
+    private int currentWaypointIndex = 0; // Índice del waypoint actual
 
     void Start()
     {
-        // Inicializa el arreglo de waypoints buscando GameObjects con nombres "WP" seguido de números.
-        waypoints = new Transform[17]; // Ajusta el tamaño según la cantidad de waypoints que tengas.
-
-        for (int i = 0; i < waypoints.Length; i++)
+        if (waypoints.Length == 0)
         {
-            Transform waypoint = GameObject.Find("WP" + (i + 1)).transform;
-            if (waypoint != null)
-            {
-                waypoints[i] = waypoint;
-            }
+            Debug.LogWarning("No se han asignado waypoints. Asegúrate de asignar los waypoints en el inspector.");
         }
     }
 
@@ -27,24 +21,21 @@ public class Npc : MonoBehaviour
     {
         if (currentWaypointIndex < waypoints.Length)
         {
-            // Calcula la dirección hacia el waypoint actual.
-            Vector2 targetPosition = waypoints[currentWaypointIndex].position;
-            Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
-            Vector2 direction = (targetPosition - currentPosition).normalized;
+            Transform currentWaypoint = waypoints[currentWaypointIndex];
 
-            // Mueve el NPC hacia el waypoint.
-            transform.Translate(direction * speed * Time.deltaTime);
-
-            // Si el NPC está lo suficientemente cerca del waypoint, pasa al siguiente.
-            if (Vector2.Distance(currentPosition, targetPosition) < 0.1f)
+            Vector3 direction = currentWaypoint.position - transform.position;
+            direction.z = 0; 
+     
+            if (direction.magnitude <= stoppingDistance)
             {
+               
                 currentWaypointIndex++;
-
-                // Si llegamos al último waypoint, reiniciamos el índice para hacer un bucle.
-                if (currentWaypointIndex >= waypoints.Length)
-                {
-                    currentWaypointIndex = 0;
-                }
+            }
+            else
+            {
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
             }
         }
     }
