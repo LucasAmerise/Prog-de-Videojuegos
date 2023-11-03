@@ -3493,6 +3493,7 @@ GameObject:
   - component: {fileID: 898721700}
   - component: {fileID: 898721699}
   - component: {fileID: 898721703}
+  - component: {fileID: 898721704}
   m_Layer: 0
   m_Name: Moto Amarilla
   m_TagString: Untagged
@@ -3671,6 +3672,27 @@ MonoBehaviour:
   - {fileID: 1343730329}
   moveSpeed: 8
   stoppingDistance: 1
+--- !u!95 &898721704
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898721698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df11fd20657b47249aa052383c50a7af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &905587923
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,6 +7556,7 @@ GameObject:
   - component: {fileID: 1739988113}
   - component: {fileID: 1739988112}
   - component: {fileID: 1739988116}
+  - component: {fileID: 1739988117}
   m_Layer: 0
   m_Name: Moto Roja
   m_TagString: Untagged
@@ -7712,6 +7735,27 @@ MonoBehaviour:
   - {fileID: 1343730329}
   moveSpeed: 8
   stoppingDistance: 1
+--- !u!95 &1739988117
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739988111}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52481affba274954e91269197716bc41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1803885473
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,6 +7876,7 @@ GameObject:
   - component: {fileID: 1932933486}
   - component: {fileID: 1932933489}
   - component: {fileID: 1932933490}
+  - component: {fileID: 1932933491}
   m_Layer: 0
   m_Name: Moto Azul
   m_TagString: Untagged
@@ -8010,6 +8055,27 @@ MonoBehaviour:
   - {fileID: 1343730329}
   moveSpeed: 8
   stoppingDistance: 1
+--- !u!95 &1932933491
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932933484}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17ebb16d053c1cb4fa5585610f33b37a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1938824208
 GameObject:
   m_ObjectHideFlags: 0
