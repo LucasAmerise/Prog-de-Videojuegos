@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
+    //Indica que al darle al boton cambia de escena a "JUEGO"
  public void Jugar()
     {
         SceneManager.LoadScene("Juego");

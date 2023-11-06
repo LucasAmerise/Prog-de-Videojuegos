@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuFinal : MonoBehaviour
 {
-
+    //Indica que al darle al boton, cambia a la escena de menu
     public void Menu()
     {
         SceneManager.LoadScene("MainMenu");

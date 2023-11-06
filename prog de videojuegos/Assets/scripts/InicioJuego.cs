@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 using TMPro;
 
 public class InicioJuego : MonoBehaviour
-{
+{ //Texto de "Pulsa ESPACIO para jugar"
     public TextMeshProUGUI textoParaBorrar;
+    //variable para que el juego inicie pausado
     private bool isPaused = true;
 
     void Start()
@@ -16,7 +17,7 @@ public class InicioJuego : MonoBehaviour
 
     void Update()
     {
-     
+     //indica que cuando el juego este pausado y se le de al espacio el juego inicie
         if (isPaused && Input.GetKeyDown(KeyCode.Space))
         {
             isPaused = false;
@@ -29,6 +30,7 @@ public class InicioJuego : MonoBehaviour
 
     public void StartGame()
     {
+        //indica que cuando se despause el juego inicie la escena
         if (!isPaused) return;
 
     
