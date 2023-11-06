@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Paredes
   - Base
+  - WP17
   layers:
   - Default
   - TransparentFX
