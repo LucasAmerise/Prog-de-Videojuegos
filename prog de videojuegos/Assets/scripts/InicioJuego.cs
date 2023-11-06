@@ -11,18 +11,18 @@ public class InicioJuego : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0f; // Iniciar el juego pausado
+        Time.timeScale = 0f; 
     }
 
     void Update()
     {
-        // Verificar si se presiona la tecla de espacio para quitar la pausa y borrar el texto
+     
         if (isPaused && Input.GetKeyDown(KeyCode.Space))
         {
             isPaused = false;
-            Time.timeScale = 1f; // Reanudar el tiempo
+            Time.timeScale = 1f;
 
-            // Borra el texto
+          
             textoParaBorrar.text = "";
         }
     }
@@ -31,10 +31,10 @@ public class InicioJuego : MonoBehaviour
     {
         if (!isPaused) return;
 
-        // Cargar la escena del juego
+    
         SceneManager.LoadScene("Juego");
 
-        // Desactivar la pausa cuando la escena del juego esté cargada
+  
         isPaused = false;
         Time.timeScale = 1f;
     }

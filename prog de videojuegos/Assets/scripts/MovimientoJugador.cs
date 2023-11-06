@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovimientoJugador : MonoBehaviour
 {
+    private AudioSource audioSource;
     public float velocidad = 5.0f; // Velocidad de movimiento del jugador.
 
     private Rigidbody2D rb;
@@ -12,6 +13,7 @@ public class MovimientoJugador : MonoBehaviour
     {
         // Obtén el componente Rigidbody2D del jugador.
         rb = GetComponent<Rigidbody2D>();
+        audioSource= rb.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -25,6 +27,14 @@ public class MovimientoJugador : MonoBehaviour
 
 
         rb.velocity = movimiento;
+        if (movimiento != Vector2.zero)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else audioSource.Stop();
     }
 }
   
