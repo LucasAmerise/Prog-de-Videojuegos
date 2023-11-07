@@ -13,14 +13,14 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Escena2.unity
-    guid: 18ffd822985422f40adc7cfd395c8d3d
+    guid: 8e8df79b9ef6f6541820cd135fa25302
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: 44a29592438c19f4fb57289ad9e695d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ganaste.unity
     guid: d94f97721b38bc24790e299630a1a916
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Perdiste.unity
     guid: e034087da1b6207458ba6c0c599afea5
   m_configObjects: {}
